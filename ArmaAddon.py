@@ -17,7 +17,7 @@ Disallowed = "#%&{}<>*?/$!:+`|='"
 total = []
 
 #finds html ignoring desktop.ini
-path = list(set(os.listdir('./input/')) - {'desktop.ini'})
+path = list(set(os.listdir('./input/')) - {'desktop.ini'} - {'.gitignore'})
 print(f"\u001b[32mModlist found in: \u001b[1m{path}\u001b[0m")
 
 try:
@@ -66,3 +66,4 @@ except:
 myfile.close()
 myfile2.close()
 #redundant but still good to have
+
